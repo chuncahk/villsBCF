@@ -16,7 +16,21 @@ class BcfDotVersion():
             raise AttributeError("Type of 'Version' must be Integer or Float")
 
 class ExtensionsDotXml():
-    __slots__ = ("Version")
+    __slots__ = ("TopicTypes","TopicStatuses","Priorities","TopicLabels","Users","SnippetTypes","Stages")
+    def __init__(self,TopicTypes,TopicStatuses,Priorities,TopicLabels,Users,SnippetTypes,Stages):
+        self.TopicTypes = TopicTypes
+        self.TopicStatuses = TopicStatuses
+        self.Priorities = Priorities
+        self.TopicLabels = TopicLabels
+        self.Users = Users
+        self.SnippetTypes = SnippetTypes
+        self.Stages = Stages
+    def __setattr__(self, attr, value):
+        value = self.check_attr_Version(attr, value)
+        object.__setattr__(self, attr, value)
+    def check_attr_Version(self,attr,value):
+        if not (isinstance(value, list)):
+            raise AttributeError("Type of 'Version' must be Integer or Float")
 
 def create_bcf_dot_version(bcfPath,objBcfDotVersion):
     """
@@ -33,3 +47,6 @@ def create_bcf_dot_version(bcfPath,objBcfDotVersion):
     tree = ET.ElementTree(root)
     tree.write(f"{bcfPath}{os.sep}bcf.version", encoding='utf-8', xml_declaration=True)
 
+
+
+#def create_extensions_xml(projectPath = "",bcfVersion = ""):
