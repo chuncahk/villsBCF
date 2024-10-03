@@ -1,5 +1,5 @@
 <h2 align="center">
-<img src="https://github.com/chuncahk/villsBCF/blob/master/_resources/villsBCF.png" alt="Relay" width="400">
+<img src="https://github.com/chuncahk/villsBCF/blob/main/_resources/villsBCF_logo.svg" alt="Relay" width="400">
 </h2>
 
 A hobby project to parse and create BIM Collaboration Format using file-based approach.
