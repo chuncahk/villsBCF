@@ -69,7 +69,7 @@ def create_bcf_version(bcfPath,objBcfVersion):
     Create bcf.version file from object BcfVersion
     """
     if not isinstance(objBcfVersion, BcfVersion):
-        raise AttributeError("Arg {objBcfVersion.title()} must be a BcfVersion object")
+        raise AttributeError("Arg objBcfVersion must be a BcfVersion object")
     Version = ET.Element("Version", attrib={"VersionId":objBcfVersion.Version})
     ET.indent(Version, space = "  ", level = 0)
     bcfPath = __check_bcfPath(bcfPath)
@@ -84,11 +84,11 @@ def create_extensions_xml(bcfPath,objExtensionsXml):
         raise AttributeError("Arg objExtensionsXml must be a ExtensionsXml object")
     Extensions = ET.Element("Extensions")
     
-    def __create_subelement(obj,main,slot,subslot):
-        ele = ET.SubElement(main,slot)
-        for text in getattr(obj,slot):
-            subEle = ET.SubElement(ele,subslot)
-            subEle.text = text
+    #def __create_subelement(obj,main,slot,subslot):
+    #    ele = ET.SubElement(main,slot)
+    #    for text in getattr(obj,slot):
+    #        subEle = ET.SubElement(ele,subslot)
+    #        subEle.text = text
     subslots = ["TopicType","TopicStatus","Priority","TopicLabel","User","SnippetType","Stage"]
     for n,slot in enumerate(objExtensionsXml.__slots__):
         #__create_subelement(objExtensionsXml, Extensions, slot, subslots[n])
