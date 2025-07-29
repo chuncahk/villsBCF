@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Markup>
+<Header>
+    <Files>
+        <File IfcProject="SomeGuid1" IfcSpatialStructureElement="SomeGuid2" IsExternal="false">
+            <Filename>example.txt</Filename>
+            <Date>2023-12-03T22:43:00</Date>
+            <Reference>http://example.com/reference</Reference>
+        </File>
+    </Files>
+</Header>
+<Topic Guid="SomeGuid3" TopicType="Issue" TopicStatus="Open">
+    <Title>Sample Topic</Title>
+    <CreationDate>2023-12-03T22:43:00</CreationDate>
+    <CreationAuthor>AuthorName</CreationAuthor>
+    <BimSnippet SnippetType="ExampleType" IsExternal="true">
+        <Reference>http://example.com/snippet</Reference>
+        <ReferenceSchema>ExampleSchema</ReferenceSchema>
+    </BimSnippet>
+    <DocumentReferences>
+        <DocumentReference Guid="SomeGuid4">
+            <DocumentGuid>SomeGuid5</DocumentGuid>
+            <Description>Sample Document</Description>
+        </DocumentReference>
+    </DocumentReferences>
+    <Comments>
+        <Comment Guid="SomeGuid6">
+            <Date>2023-12-03T22:43:00</Date>
+            <Author>AuthorName</Author>
+            <Comment>Sample comment text</Comment>
+            <Viewpoint Guid="SomeGuid7" />
+        </Comment>
+    </Comments>
+</Topic>

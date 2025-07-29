@@ -1,0 +1,25 @@
+{
+    "Markup": {
+        "@attributes": {
+            "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+            "xsi:schemaLocation": "markup.xsd"
+        },
+        "Header": {
+            "Files": ""
+        },
+        "Topic": {
+            "@attributes": {
+                "Guid": "b0ddb128-a997-44c1-8ad8-59492daa5f6b",
+                "TopicStatus": "OPEN",
+                "TopicType": "ERROR"
+            },
+            "Title": "Minimum information",
+            "CreationDate": "2021-02-17T09:16:36.674Z",
+            "CreationAuthor": "Architect@example.com",
+            "DocumentReferences": "",
+            "RelatedTopics": "",
+            "Comments": "",
+            "Viewpoints": ""
+        }
+    }
+}
